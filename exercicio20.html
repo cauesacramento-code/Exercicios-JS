@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="entrada" onkeyup="LetraNumero()">
+    <hr>
+    <input type="text" id="letra" disabled="disabled">
+    <input type="text" id="numero" disabled="disabled">
+    <script> 
+        
+        function LetraNumero() {
+            var entrada = document.getElementById('entrada').value;
+            if (entrada=="1" || entrada=="2" || entrada=="3" || entrada=="4" || entrada=="5" || entrada=="6" || entrada=="7" || entrada=="8" || entrada=="9" || entrada=="0")
+            document.getElementById('numero').value=entrada;
+            else{
+                document.getElementById('letra').value=entrada;
+            }
+            document.getElementById('entrada').value=null;
+        }
+    </script>
+</body>
+</html>

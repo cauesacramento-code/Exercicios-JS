@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="inicio()" onbeforeunload="sair()">
+
+    <h1>Banco Digital - Terminal Seguro</h1>
+
+    <p>Digite sua senha de 4 dígitos:</p>
+
+    <input type="password" onkeyup="tecla()">
+
+
+    <button onclick="confirmar()">
+        Confirmar Operação
+    </button>
+
+
+<script>
+
+    // Regra 1 - página carregou
+    function inicio(){
+        alert("Caixa Eletrônico Pronto. Insira seus dados.");
+    }
+
+
+    // Regra 2 - digitou na senha
+    function tecla(){
+        console.log("Detectando digitação segura...");
+    }
+
+
+    // Regra 3 - clicou no botão
+    function confirmar(){
+        alert("Processando transação ... aguarde.");
+    }
+
+
+    // Regra 4 - tentar sair
+    function sair(){
+        return "Deseja realmente sair do site?";
+    }
+
+
+</script>
+
+</body>
+</html>

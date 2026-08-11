@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+
+    <script>
+        var nome = prompt('Digite seu nome:');
+        var classe = prompt('Digite sua classe (1, 2 ou 3):');
+        var venda = Number(prompt('Digite o total mensal de vendas:'));
+
+        var salario;
+        var comissao;
+        var total;
+
+        if (classe == '1') {
+            salario = 1500;
+            comissao = 0.025; // 2,5%
+
+        } else if (classe == '2') {
+            salario = 2000;
+            comissao = 0.03; // 3%
+
+        } else if (classe == '3') {
+            salario = 2500;
+            comissao = 0.05; // 5%
+
+        } else {
+            document.write('Classe inválida!');
+        }
+
+        if (classe == '1' || classe == '2' || classe == '3') {
+            total = salario + (comissao * venda);
+
+            document.write(
+                'Funcionário: ' + nome +
+                '<br>Salário total deste mês: R$ ' + total.toFixed(2)
+            );
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
